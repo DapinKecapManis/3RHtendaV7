@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1E3A5F" />
+    <title>Galeri Dokumentasi | 3RH Tenda</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./assets/index-BS0xLUaa.css" />
+    <style>
+      :root {
+        color-scheme: light;
+        --navy: #1e3a5f;
+        --gold: #d78a37;
+        --ink: #202a35;
+        --muted: #647184;
+        --line: #dce1e8;
+        font-family: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { min-height: 100%; scrollbar-width: none; }
+      html::-webkit-scrollbar, body::-webkit-scrollbar, *::-webkit-scrollbar { display: none; width: 0; height: 0; }
+      body { margin: 0; background: #fff; color: var(--ink); }
+      a { color: inherit; }
+      .topbar { position: sticky; top: 0; z-index: 20; background: var(--navy); color: #fff; box-shadow: 0 8px 24px -8px #1e3a5f88; }
+      .topbar-inner { width: min(1280px, 100%); height: 64px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; }
+      .brand { display: inline-flex; align-items: center; }
+      .brand img { display: block; width: 156px; max-width: min(156px, 42vw); height: 46px; object-fit: contain; }
+      .back { display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid #ffffff40; border-radius: 8px; color: #fff; text-decoration: none; }
+      .back:hover { background: #ffffff12; }
+      .back svg { width: 22px; height: 22px; }
+      main { width: min(1280px, 100%); margin: 0 auto; padding: 52px 24px 80px; }
+      .intro { margin: 0 auto 44px; text-align: center; }
+      .eyebrow { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0; color: #b8702a; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      .eyebrow::before, .eyebrow::after { width: 32px; height: 1px; background: #b8702a88; content: ""; }
+      h1, h2 { color: var(--navy); font-family: "Playfair Display Variable", Georgia, serif; font-weight: 600; }
+      h1 { margin: 12px 0 0; font-size: 40px; line-height: 1.12; }
+      .count { display: inline-flex; min-height: 30px; align-items: center; margin: 14px 0 0; padding: 4px 12px; border: 1px solid #1e3a5f26; border-radius: 999px; color: var(--muted); font-size: 13px; }
+      section + section { margin-top: 48px; }
+      h2 { margin: 0 0 18px; font-size: 28px; line-height: 1.2; }
+      .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px 16px; }
+      .photo-card { min-width: 0; margin: 0; }
+      .photo { display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; padding: 0; border: 1px solid var(--line); border-radius: 8px; background: #f1f3f5; cursor: zoom-in; }
+      .photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 180ms ease; }
+      .photo:hover img { transform: scale(1.025); }
+      .photo:focus-visible, .close:focus-visible, .back:focus-visible { outline: 3px solid #e6a14e; outline-offset: 3px; }
+      dialog { width: min(96vw, 1120px); max-width: none; max-height: 96dvh; padding: 12px; border: 1px solid #ffffff2e; border-radius: 8px; background: #101820; color: white; scrollbar-width: none; }
+      dialog::-webkit-scrollbar { display: none; }
+      dialog::backdrop { background: #101820e8; }
+      .viewer-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 0 10px; }
+      .viewer-head p { margin: 0; font-size: 14px; }
+      .close { display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid #ffffff55; border-radius: 8px; background: #ffffff12; color: white; font-size: 22px; cursor: pointer; }
+      .viewer-image { display: block; max-width: 100%; max-height: calc(96dvh - 82px); margin: 0 auto; object-fit: contain; }
+      @media (max-width: 1023px) {
+        .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      }
+      @media (max-width: 639px) {
+        .topbar-inner { height: 64px; padding: 0 16px; }
+        main { padding: 34px 16px 56px; }
+        .intro { margin-bottom: 34px; }
+        h1 { font-size: 32px; }
+        h2 { font-size: 24px; }
+        .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 10px; }
+        section + section { margin-top: 36px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./index.html#beranda" aria-label="3RH Tenda, kembali ke beranda"><img src="./logo.svg" alt="3RH Tenda" /></a>
+        <a class="back" href="./index.html#galeri" aria-label="Kembali ke galeri utama" title="Kembali ke galeri utama">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="intro">
+        <p class="eyebrow">Galeri</p>
+        <h1>Galeri Dokumentasi</h1>
+        <p class="count">22 foto</p>
+      </div>
+      <div id="photo-groups"></div>
+    </main>
+    <dialog id="photo-viewer" aria-label="Foto galeri">
+      <div class="viewer-head">
+        <p id="photo-caption"></p>
+        <button class="close" type="button" aria-label="Tutup foto">&times;</button>
+      </div>
+      <img class="viewer-image" alt="" />
+    </dialog>
+    <script>
+      const groups = [
+        { title: "Dekorasi Pelaminan", path: "dekorasi-pelaminan", count: 15 },
+        { title: "Dekorasi Tenda Pernikahan", path: "dekorasi-tenda", count: 2 },
+        { title: "Makeup dan Busana Pengantin", path: "makeup-pengantin", count: 5 },
+      ];
+      const container = document.querySelector("#photo-groups");
+      const viewer = document.querySelector("#photo-viewer");
+      const viewerImage = viewer.querySelector(".viewer-image");
+      const caption = document.querySelector("#photo-caption");
+
+      for (const group of groups) {
+        const section = document.createElement("section");
+        const heading = document.createElement("h2");
+        const grid = document.createElement("div");
+        heading.textContent = group.title;
+        grid.className = "grid";
+        grid.setAttribute("aria-label", group.title);
+
+        for (let index = 1; index <= group.count; index += 1) {
+          const title = `${group.title} ${index}`;
+          const button = document.createElement("button");
+          const image = document.createElement("img");
+          const file = `./images/galeri/pesta-pernikahan/${group.path}/${index}`;
+          button.className = "photo";
+          button.type = "button";
+          button.setAttribute("aria-label", `Buka foto: ${title}`);
+          image.src = `${file}-thumb.jpg`;
+          image.alt = title;
+          image.loading = "lazy";
+          image.decoding = "async";
+          button.append(image);
+          button.addEventListener("click", () => {
+            viewerImage.src = `${file}.jpg`;
+            viewerImage.alt = title;
+            caption.textContent = title;
+            viewer.showModal();
+          });
+          grid.append(button);
+        }
+
+        section.append(heading, grid);
+        container.append(section);
+      }
+
+      viewer.querySelector(".close").addEventListener("click", () => viewer.close());
+      viewer.addEventListener("click", event => {
+        if (event.target === viewer) viewer.close();
+      });
+    </script>
+  </body>
+</html>

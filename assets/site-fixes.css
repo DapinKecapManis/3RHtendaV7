@@ -77,6 +77,10 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
   justify-content: center;
 }
 
+#faq [role="region"] p {
+  text-align: left;
+}
+
 #beranda > div:last-of-type > [data-hero-item] {
   opacity: 1 !important;
   transform: none !important;
