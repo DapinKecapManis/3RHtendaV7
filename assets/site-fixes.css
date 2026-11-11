@@ -55,6 +55,40 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
   }
 }
 
+#beranda > div:last-of-type {
+  min-height: 100svh;
+  margin-top: -4rem;
+  align-items: center;
+  justify-content: center;
+  padding-block: 0;
+  text-align: center;
+}
+
+#beranda h1 {
+  margin-top: 0;
+}
+
+#beranda > div:last-of-type > [data-hero-item].rounded-full,
+#beranda > div:last-of-type > [data-hero-item]:has(> a[href*="wa.me"]) {
+  display: none;
+}
+
+#beranda > div:last-of-type > [data-hero-item].mt-7 {
+  justify-content: center;
+}
+
+#beranda > div:last-of-type > [data-hero-item] {
+  opacity: 1 !important;
+  transform: none !important;
+  translate: none !important;
+}
+
+@media (min-width: 1024px) {
+  #beranda > div:last-of-type {
+    margin-top: -5rem;
+  }
+}
+
 .fixed.inset-0:has(> [role="dialog"][aria-labelledby="detail-title"]) {
   align-items: stretch;
   justify-content: stretch;
@@ -82,11 +116,6 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
 @media (max-width: 639px) {
   #kontak [data-reveal] > div.relative {
     text-align: left;
-  }
-
-  #beranda > div:last-of-type {
-    min-height: calc(100svh - 4rem);
-    justify-content: center;
   }
 
   main section [data-reveal] {
