@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="288 359 1402 721" role="img" aria-labelledby="title">
+  <title id="title">3RH Tenda</title>
+  <g stroke="#fff" stroke-width="32" stroke-linejoin="round">
+    <g>
+      <ellipse cx="703" cy="515" rx="43" ry="56" fill="#FF5F26" />
+      <ellipse cx="992" cy="515" rx="43" ry="54" fill="#FF5F26" />
+      <ellipse cx="1280" cy="522" rx="43" ry="55" fill="#FF5F26" />
+      <polygon points="950,978 1215,645 1335,645 1590,975 1450,978 1272,727 1100,978" fill="#7B7575" />
+      <polygon points="388,975 655,645 760,645 990,918 950,980 905,980 710,727 530,980" fill="#AE0C0F" />
+      <polygon points="668,980 935,645 1050,645 1310,980 1175,980 990,727 805,980" fill="#141414" />
+    </g>
+  </g>
+</svg>

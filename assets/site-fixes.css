@@ -1,0 +1,160 @@
+header nav > a:first-child {
+  display: flex;
+  align-items: center;
+}
+
+header nav > a:first-child img {
+  width: 156px;
+  height: 46px;
+  max-width: min(156px, 42vw);
+  object-fit: contain;
+}
+
+footer img[src$="logo.svg"] {
+  width: auto;
+  height: 40px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+a.min-h-10.bg-forest[href*="wa.me"] {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  gap: 0;
+  padding: 0;
+}
+
+a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
+  display: none;
+}
+
+#kalkulator form .flex.gap-2.overflow-x-auto {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: visible;
+}
+
+#kalkulator form .flex.gap-2.overflow-x-auto > button {
+  width: 100%;
+  min-width: 0;
+  padding-inline: 8px;
+  text-align: center;
+  white-space: normal;
+}
+
+@media (min-width: 640px) {
+  #kalkulator form .flex.gap-2.overflow-x-auto {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  #kalkulator form .flex.gap-2.overflow-x-auto {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.fixed.inset-0:has(> [role="dialog"][aria-labelledby="detail-title"]) {
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+}
+
+[role="dialog"][aria-labelledby="detail-title"] {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: 100dvh;
+  border-radius: 0;
+}
+
+[role="dialog"][aria-labelledby="detail-title"] > button[aria-label="Tutup detail produk"] {
+  position: sticky;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  right: auto;
+  z-index: 20;
+  align-self: flex-end;
+  flex: 0 0 44px;
+  margin: 12px 12px -44px 0;
+}
+
+@media (max-width: 639px) {
+  #kontak [data-reveal] > div.relative {
+    text-align: left;
+  }
+
+  #beranda > div:last-of-type {
+    min-height: calc(100svh - 4rem);
+    justify-content: center;
+  }
+
+  main section [data-reveal] {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] > div:last-child {
+    text-align: center;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] h2 {
+    text-wrap: balance;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] p.mt-5 {
+    justify-content: center;
+  }
+
+  main section [data-hero-item] > a {
+    justify-content: center;
+    text-align: center;
+  }
+
+  main section [data-hero-item] > a > span.min-w-0 {
+    flex: 0 1 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  [role="dialog"][aria-labelledby="detail-title"] > button[aria-label="Tutup detail produk"] {
+    margin: -44px 12px 0 0;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] > div:has(> ul[aria-label="Galeri foto"]) {
+    display: contents;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] > div:has(> ul[aria-label="Galeri foto"]) > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] > div:has(> ul[aria-label="Galeri foto"]) > ul {
+    width: 100%;
+    min-height: 80px;
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  [role="dialog"][aria-labelledby="detail-title"] > button[aria-label="Tutup detail produk"] {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] > div:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] > div:last-child {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}

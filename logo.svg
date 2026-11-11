@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="288 359 2700 721" role="img" aria-labelledby="title desc">
+  <title id="title">3RH Tenda</title>
+  <desc id="desc">Logo tiga puncak 3RH Tenda dengan nama dan jenis layanan.</desc>
+  <g stroke="#fff" stroke-width="32" stroke-linejoin="round">
+    <g>
+      <ellipse cx="703" cy="515" rx="43" ry="56" fill="#FF5F26" />
+      <ellipse cx="992" cy="515" rx="43" ry="54" fill="#FF5F26" />
+      <ellipse cx="1280" cy="522" rx="43" ry="55" fill="#FF5F26" />
+      <polygon points="950,978 1215,645 1335,645 1590,975 1450,978 1272,727 1100,978" fill="#7B7575" />
+      <polygon points="388,975 655,645 760,645 990,918 950,980 905,980 710,727 530,980" fill="#AE0C0F" />
+      <polygon points="668,980 935,645 1050,645 1310,980 1175,980 990,727 805,980" fill="#141414" />
+    </g>
+  </g>
+  <text x="1740" y="790" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="180" font-weight="800">3RH TENDA</text>
+  <text x="1748" y="940" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="600">SEWA TENDA &amp; PERLENGKAPAN ALAT PESTA</text>
+</svg>
