@@ -23,6 +23,13 @@ a.min-h-10.bg-forest[href*="wa.me"] {
   flex: 0 0 40px;
   gap: 0;
   padding: 0;
+  background-color: #25d366;
+}
+
+a[aria-label="Konsultasi via WhatsApp (membuka WhatsApp di tab baru)"] {
+  background-color: #25d366 !important;
+  color: #fff !important;
+  --tw-ring-color: #25d366 !important;
 }
 
 a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
