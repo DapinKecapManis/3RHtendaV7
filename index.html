@@ -29,6 +29,16 @@
       };
       window.requestAnimationFrame(scrollToGallery);
     }
+
+    // Tangani klik Beranda di navbar (Desktop & Mobile) agar scroll tepat ke paling atas (0, 0)
+    document.addEventListener("click", (e) => {
+      const link = e.target.closest('a[href="#beranda"]');
+      if (link) {
+        e.preventDefault();
+        history.pushState(null, "", "#beranda");
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      }
+    });
   </script>
 </body>
 
