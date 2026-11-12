@@ -1,9 +1,9 @@
-header nav > a:first-child {
+header nav>a:first-child {
   display: flex;
   align-items: center;
 }
 
-header nav > a:first-child img {
+header nav>a:first-child img {
   width: 156px;
   height: 46px;
   max-width: min(156px, 42vw);
@@ -32,7 +32,7 @@ a[aria-label="Konsultasi via WhatsApp (membuka WhatsApp di tab baru)"] {
   --tw-ring-color: #25d366 !important;
 }
 
-a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
+a.min-h-10.bg-forest[href*="wa.me"]>span:not(.sr-only) {
   display: none;
 }
 
@@ -42,7 +42,7 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
   overflow: visible;
 }
 
-#kalkulator form .flex.gap-2.overflow-x-auto > button {
+#kalkulator form .flex.gap-2.overflow-x-auto>button {
   width: 100%;
   min-width: 0;
   padding-inline: 8px;
@@ -62,7 +62,7 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
   }
 }
 
-#beranda > div:last-of-type {
+#beranda>div:last-of-type {
   min-height: calc(100svh - 4rem);
   margin-top: 0;
   align-items: center;
@@ -75,7 +75,7 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
   margin-top: 0;
 }
 
-#beranda > div:last-of-type > p[data-hero-item].mt-5 {
+#beranda>div:last-of-type>p[data-hero-item].mt-5 {
   max-width: min(100%, 38rem);
   margin: 1.75rem auto 0;
   color: #f6c578;
@@ -83,12 +83,12 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
   text-wrap: balance;
 }
 
-#beranda > div:last-of-type > [data-hero-item].rounded-full,
-#beranda > div:last-of-type > [data-hero-item]:has(> a[href*="wa.me"]) {
+#beranda>div:last-of-type>[data-hero-item].rounded-full,
+#beranda>div:last-of-type>[data-hero-item]:has(> a[href*="wa.me"]) {
   display: none;
 }
 
-#beranda > div:last-of-type > [data-hero-item].mt-7 {
+#beranda>div:last-of-type>[data-hero-item].mt-7 {
   justify-content: center;
 }
 
@@ -96,57 +96,94 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
   text-align: left;
 }
 
-#beranda > div:last-of-type > [data-hero-item] {
+#beranda>div:last-of-type>[data-hero-item] {
   opacity: 1 !important;
   transform: none !important;
   translate: none !important;
 }
 
 @media (min-width: 1024px) {
-  #beranda > div:last-of-type {
+  #beranda>div:last-of-type {
     min-height: calc(100svh - 5rem);
     margin-top: 0;
     padding-block: 2.5rem;
   }
 }
 
+.fixed.inset-0:has(> [role="dialog"][aria-labelledby="detail-title"]) {
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+}
+
+[role="dialog"][aria-labelledby="detail-title"] {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: 100dvh;
+  border-radius: 0;
+}
+
+[role="dialog"][aria-labelledby="detail-title"]>button[aria-label="Tutup detail produk"] {
+  position: sticky;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  right: auto;
+  z-index: 20;
+  align-self: flex-end;
+  flex: 0 0 44px;
+  margin: 12px 12px -44px 0;
+}
+
+@media (max-width: 639px) {
+  #kontak [data-reveal]>div.relative {
+    text-align: left;
+  }
+
+  main section [data-reveal] {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"]>div:last-child {
+    text-align: center;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] h2 {
+    text-wrap: balance;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] p.mt-5 {
+    justify-content: center;
+  }
+
+  main section [data-hero-item]>a {
+    justify-content: center;
+    text-align: center;
+  }
+
+  main section [data-hero-item]>a>span.min-w-0 {
+    flex: 0 1 auto;
+    text-align: center;
+  }
+}
+
 @media (max-width: 767px) {
-  .fixed.inset-0:has(> [role="dialog"][aria-labelledby="detail-title"]) {
-    align-items: stretch;
-    justify-content: stretch;
-    padding: 0;
-  }
-
-  [role="dialog"][aria-labelledby="detail-title"] {
-    width: 100vw;
-    max-width: none;
-    height: 100dvh;
-    max-height: 100dvh;
-    border-radius: 0;
-  }
-
-  [role="dialog"][aria-labelledby="detail-title"] > button[aria-label="Tutup detail produk"] {
-    position: sticky;
-    top: calc(env(safe-area-inset-top, 0px) + 12px);
-    right: auto;
-    z-index: 20;
-    align-self: flex-end;
-    flex: 0 0 44px;
+  [role="dialog"][aria-labelledby="detail-title"]>button[aria-label="Tutup detail produk"] {
     margin: -44px 12px 0 0;
   }
 
-  [role="dialog"][aria-labelledby="detail-title"] > div:has(> ul[aria-label="Galeri foto"]) {
+  [role="dialog"][aria-labelledby="detail-title"]>div:has(> ul[aria-label="Galeri foto"]) {
     display: contents;
   }
 
-  [role="dialog"][aria-labelledby="detail-title"] > div:has(> ul[aria-label="Galeri foto"]) > img {
+  [role="dialog"][aria-labelledby="detail-title"]>div:has(> ul[aria-label="Galeri foto"])>img {
     display: block;
     width: 100%;
     height: auto;
     aspect-ratio: 4 / 3;
   }
 
-  [role="dialog"][aria-labelledby="detail-title"] > div:has(> ul[aria-label="Galeri foto"]) > ul {
+  [role="dialog"][aria-labelledby="detail-title"]>div:has(> ul[aria-label="Galeri foto"])>ul {
     width: 100%;
     min-height: 80px;
     flex: 0 0 auto;
@@ -154,99 +191,48 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
 }
 
 @media (min-width: 768px) {
-  .fixed.inset-0:has(> [role="dialog"][aria-labelledby="detail-title"]) {
-    align-items: center;
-    justify-content: center;
-    padding: 2.5rem 1.5rem;
-    background-color: rgba(15, 30, 24, 0.75);
-    backdrop-filter: blur(8px);
+  [role="dialog"][aria-labelledby="detail-title"]>button[aria-label="Tutup detail produk"] {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
   }
 
-  [role="dialog"][aria-labelledby="detail-title"] {
-    width: 100%;
-    max-width: 980px;
-    height: auto;
-    max-height: 88vh;
-    border-radius: 1.5rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    background-color: #ffffff;
+  [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
   }
 
-  [role="dialog"][aria-labelledby="detail-title"] > button[aria-label="Tutup detail produk"] {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 30;
-    margin: 0;
-    background-color: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  [role="dialog"][aria-labelledby="detail-title"]>div:last-child {
+    grid-column: 2;
+    grid-row: 1;
   }
+}
 
-  [role="dialog"][aria-labelledby="detail-title"] > button[aria-label="Tutup detail produk"]:hover {
-    background-color: #ffffff;
-    transform: scale(1.05);
-  }
+/* Pastikan foto mengisi penuh kolomnya tanpa menyisakan ruang putih di bawah */
+[role="dialog"][aria-labelledby="detail-title"]>div:first-of-type {
+  display: flex;
+  flex-direction: column;
+}
 
-  /* Kolom kiri: Container foto & thumbnail diberi background netral dan garis pembatas tegas */
-  [role="dialog"][aria-labelledby="detail-title"] > div:first-of-type {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #f6f8f6;
-    border-right: 1.5px solid #e2e8e2;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-  }
+[role="dialog"][aria-labelledby="detail-title"]>div:first-of-type>img {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+}
 
-  [role="dialog"][aria-labelledby="detail-title"] > div:first-of-type > img {
-    width: 100%;
-    height: 100%;
-    min-height: 340px;
-    max-height: 480px;
-    object-fit: cover;
-    display: block;
-    background-color: #edf2ed;
-  }
+/* Sembunyikan scrollbar thumbnail foto dan pastikan tetap bisa scroll ke samping */
+[role="dialog"][aria-labelledby="detail-title"] ul[aria-label="Galeri foto"] {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE dan Edge lama */
+}
 
-  [role="dialog"][aria-labelledby="detail-title"] > div:first-of-type > ul[aria-label="Galeri foto"] {
-    background-color: #ffffff;
-    padding: 0.875rem 1rem;
-    border-top: 1px solid #e2e8e2;
-    display: flex;
-    gap: 0.625rem;
-    overflow-x: auto;
-    flex-shrink: 0;
-  }
-
-  [role="dialog"][aria-labelledby="detail-title"] > div:first-of-type > ul[aria-label="Galeri foto"] button {
-    border-radius: 0.5rem;
-    transition: all 0.2s ease;
-  }
-
-  /* Kolom kanan: Teks, harga, tombol aksi dengan padding dan background putih bersih */
-  [role="dialog"][aria-labelledby="detail-title"] > div:last-child {
-    display: flex;
-    flex-direction: column;
-    padding: 2.25rem 2rem 2rem 2.25rem;
-    overflow-y: auto;
-    max-height: 88vh;
-    background-color: #ffffff;
-  }
-
-  [role="dialog"][aria-labelledby="detail-title"] h2 {
-    font-size: 1.85rem;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-  }
-
-  [role="dialog"][aria-labelledby="detail-title"] dl {
-    margin-top: 1.25rem;
-    background-color: #fafbfa;
-    border: 1px solid #e7ebe7;
-  }
+[role="dialog"][aria-labelledby="detail-title"] ul[aria-label="Galeri foto"]::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+  width: 0;
+  height: 0;
 }
