@@ -1,34 +1,35 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1E3A5F" />
-    <title>3RH Tenda | Sewa Tenda dan Perlengkapan Event Jabodetabek</title>
-    <meta
-      name="description"
-      content="Sewa tenda dan perlengkapan event untuk berbagai jenis kegiatan di wilayah Jabodetabek. Lihat katalog dan hitung estimasi harga."
-    />
-    <script type="module" crossorigin src="./assets/index-CXPpN4oh.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BS0xLUaa.css">
-    <link rel="stylesheet" href="./assets/site-fixes.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script>
-      if (window.location.hash === "#galeri") {
-        let attempts = 0;
-        const scrollToGallery = () => {
-          const gallery = document.getElementById("galeri");
-          if (gallery) {
-            gallery.scrollIntoView({ block: "start", behavior: "instant" });
-          } else if (attempts++ < 120) {
-            window.requestAnimationFrame(scrollToGallery);
-          }
-        };
-        window.requestAnimationFrame(scrollToGallery);
-      }
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1E3A5F" />
+  <title>3RH Tenda | Sewa Tenda dan Perlengkapan Event Jabodetabek</title>
+  <meta name="description"
+    content="Sewa tenda dan perlengkapan event untuk berbagai jenis kegiatan di wilayah Jabodetabek. Lihat katalog dan hitung estimasi harga." />
+  <script type="module" crossorigin src="./assets/index-CXPpN4oh.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BS0xLUaa.css">
+  <link rel="stylesheet" href="./assets/site-fixes.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    if (window.location.hash === "#galeri") {
+      let attempts = 0;
+      const scrollToGallery = () => {
+        const gallery = document.getElementById("galeri");
+        if (gallery) {
+          gallery.scrollIntoView({ block: "start", behavior: "instant" });
+        } else if (attempts++ < 120) {
+          window.requestAnimationFrame(scrollToGallery);
+        }
+      };
+      window.requestAnimationFrame(scrollToGallery);
+    }
+  </script>
+</body>
+
 </html>
