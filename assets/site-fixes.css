@@ -205,12 +205,26 @@ a.min-h-10.bg-forest[href*="wa.me"]>span:not(.sr-only) {
     height: 100%;
   }
 
-  [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type>img {
-    flex: 1 1 auto;
-    width: 100%;
+  /* Jika produk hanya memiliki 1 foto (tidak ada ul thumbnail), foto mengisi 100% tinggi penuh */
+  [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type:not(:has(ul)) {
+    justify-content: stretch;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type:not(:has(ul))>img {
     height: 100% !important;
+    max-height: none !important;
+    flex: 1 1 100% !important;
+  }
+
+  /* Jika produk memiliki lebih dari 1 foto (ada ul thumbnail) */
+  [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type:has(ul)>img {
+    height: calc(100% - 5rem) !important;
+    flex: 1 1 auto;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type>img {
+    width: 100%;
     min-height: 340px;
-    max-height: 480px;
     object-fit: cover;
     display: block;
     background-color: #edf2ed;
