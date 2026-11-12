@@ -63,11 +63,11 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
 }
 
 #beranda > div:last-of-type {
-  min-height: 100svh;
-  margin-top: -4rem;
+  min-height: calc(100svh - 4rem);
+  margin-top: 0;
   align-items: center;
   justify-content: center;
-  padding-block: 0;
+  padding-block: 2rem;
   text-align: center;
 }
 
@@ -104,7 +104,9 @@ a.min-h-10.bg-forest[href*="wa.me"] > span:not(.sr-only) {
 
 @media (min-width: 1024px) {
   #beranda > div:last-of-type {
-    margin-top: -5rem;
+    min-height: calc(100svh - 5rem);
+    margin-top: 0;
+    padding-block: 2.5rem;
   }
 }
 
