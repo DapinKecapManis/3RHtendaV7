@@ -110,70 +110,36 @@ a.min-h-10.bg-forest[href*="wa.me"]>span:not(.sr-only) {
   }
 }
 
-.fixed.inset-0:has(> [role="dialog"][aria-labelledby="detail-title"]) {
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0;
-}
-
-[role="dialog"][aria-labelledby="detail-title"] {
-  width: 100vw;
-  max-width: none;
-  height: 100dvh;
-  max-height: 100dvh;
-  border-radius: 0;
-}
-
-[role="dialog"][aria-labelledby="detail-title"]>button[aria-label="Tutup detail produk"] {
-  position: sticky;
-  top: calc(env(safe-area-inset-top, 0px) + 12px);
-  right: auto;
-  z-index: 20;
-  align-self: flex-end;
-  flex: 0 0 44px;
-  margin: 12px 12px -44px 0;
-}
-
-@media (max-width: 639px) {
-  #kontak [data-reveal]>div.relative {
-    text-align: left;
-  }
-
-  main section [data-reveal] {
-    margin-inline: auto;
-    text-align: center;
-  }
-
-  [role="dialog"][aria-labelledby="detail-title"]>div:last-child {
-    text-align: center;
-  }
-
-  [role="dialog"][aria-labelledby="detail-title"] h2 {
-    text-wrap: balance;
-  }
-
-  [role="dialog"][aria-labelledby="detail-title"] p.mt-5 {
-    justify-content: center;
-  }
-
-  main section [data-hero-item]>a {
-    justify-content: center;
-    text-align: center;
-  }
-
-  main section [data-hero-item]>a>span.min-w-0 {
-    flex: 0 1 auto;
-    text-align: center;
-  }
-}
-
 @media (max-width: 767px) {
+  .fixed.inset-0:has(> [role="dialog"][aria-labelledby="detail-title"]) {
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 0;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] {
+    width: 100vw;
+    max-width: none;
+    height: 100dvh;
+    max-height: 100dvh;
+    border-radius: 0;
+  }
+
   [role="dialog"][aria-labelledby="detail-title"]>button[aria-label="Tutup detail produk"] {
+    position: sticky;
+    top: calc(env(safe-area-inset-top, 0px) + 12px);
+    right: auto;
+    z-index: 20;
+    align-self: flex-end;
+    flex: 0 0 44px;
     margin: -44px 12px 0 0;
   }
 
   [role="dialog"][aria-labelledby="detail-title"]>div:has(> ul[aria-label="Galeri foto"]) {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-shrink: 0;
   }
 
   [role="dialog"][aria-labelledby="detail-title"]>div:has(> ul[aria-label="Galeri foto"])>img {
@@ -181,31 +147,118 @@ a.min-h-10.bg-forest[href*="wa.me"]>span:not(.sr-only) {
     width: 100%;
     height: auto;
     aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 
-  [role="dialog"][aria-labelledby="detail-title"]>div:has(> ul[aria-label="Galeri foto"])>ul {
-    width: 100%;
-    min-height: 80px;
-    flex: 0 0 auto;
+  [role="dialog"][aria-labelledby="detail-title"]>div:last-child {
+    border-top: 1px solid #e2e8e2;
   }
 }
 
 @media (min-width: 768px) {
+  .fixed.inset-0:has(> [role="dialog"][aria-labelledby="detail-title"]) {
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    background-color: rgba(15, 30, 24, 0.75);
+    backdrop-filter: blur(8px);
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] {
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    max-height: 88vh;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    background-color: #ffffff;
+  }
+
   [role="dialog"][aria-labelledby="detail-title"]>button[aria-label="Tutup detail produk"] {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    align-self: start;
-    justify-self: end;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 30;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   }
 
+  [role="dialog"][aria-labelledby="detail-title"]>button[aria-label="Tutup detail produk"]:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+  }
+
+  /* Kolom kiri: Container foto & thumbnail diberi background netral dan garis pembatas tegas */
   [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type {
-    grid-column: 1;
-    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f6f8f6;
+    border-right: 1.5px solid #e2e8e2;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
   }
 
+  [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type>img {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100% !important;
+    min-height: 340px;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+    background-color: #edf2ed;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type>ul[aria-label="Galeri foto"] {
+    background-color: #ffffff;
+    padding: 0.875rem 1rem;
+    border-top: 1px solid #e2e8e2;
+    display: flex;
+    gap: 0.625rem;
+    overflow-x: auto;
+    flex-shrink: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type>ul[aria-label="Galeri foto"]::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"]>div:first-of-type>ul[aria-label="Galeri foto"] button {
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  /* Kolom kanan: Teks, harga, tombol aksi dengan padding dan background putih bersih */
   [role="dialog"][aria-labelledby="detail-title"]>div:last-child {
-    grid-column: 2;
-    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem 2rem 2rem 2.25rem;
+    overflow-y: auto;
+    max-height: 88vh;
+    background-color: #ffffff;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] h2 {
+    font-size: 1.85rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  [role="dialog"][aria-labelledby="detail-title"] dl {
+    margin-top: 1.25rem;
+    background-color: #fafbfa;
+    border: 1px solid #e7ebe7;
   }
 }
 
