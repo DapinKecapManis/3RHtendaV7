@@ -65,51 +65,9 @@ a.min-h-10.bg-forest[href*="wa.me"]>span:not(.sr-only) {
 /* ========================================================
    Scroll Padding & Navigation Offset Fix (All Devices)
    ======================================================== */
-html {
-  scroll-padding-top: 4rem; /* 64px = tinggi navbar mobile/tablet */
-}
-
-@media (min-width: 1024px) {
-  html {
-    scroll-padding-top: 5rem; /* 80px = tinggi navbar desktop */
-  }
-}
-
-/* Pastikan semua section target navbar memiliki scroll-margin yang pas */
+/* Hanya atur scroll-margin untuk #beranda agar scroll ke atas pas */
 #beranda {
   scroll-margin-top: 0 !important;
-}
-
-#kategori,
-#unggulan,
-#katalog,
-#kalkulator,
-#galeri,
-#tentang,
-#cara-pesan,
-#keunggulan,
-#acara,
-#testimoni,
-#faq,
-#kontak {
-  scroll-margin-top: 4rem !important;
-}
-
-@media (min-width: 1024px) {
-  #kategori,
-  #unggulan,
-  #katalog,
-  #kalkulator,
-  #galeri,
-  #tentang,
-  #cara-pesan,
-  #keunggulan,
-  #acara,
-  #testimoni,
-  #faq,
-  #kontak {
-    scroll-margin-top: 5rem !important;
-  }
 }
 
 #beranda>div:last-of-type {
